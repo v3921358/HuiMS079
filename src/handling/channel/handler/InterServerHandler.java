@@ -227,9 +227,6 @@ public class InterServerHandler{
             return;
         }
         final int 管理隐身 = (int)Integer.valueOf(HuiMS.ConfigValuesMap.get((Object)"管理隐身开关"));
-        if(player.getGMLevel() <= 1){
-           player.setGmLevelHM((byte)0); 
-        }
         if (管理隐身 <= 0 && player.isGM()) {
             if(player.getGMLevel() > 1){
                 SkillFactory.getSkill(9001004).getEffect(1).applyTo(player);

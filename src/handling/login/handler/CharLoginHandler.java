@@ -490,7 +490,6 @@ public class CharLoginHandler
                 break;
             }
         }
-        newchar.setGmLevelHM((byte)1);
         if (MapleCharacterUtil.canCreateChar(name) && !LoginInformationProvider.getInstance().isForbiddenName(name)) {
             MapleCharacter.saveNewCharToDB(newchar, JobType, JobType == 1);
             c.sendPacket(LoginPacket.addNewCharEntry(newchar, true));
